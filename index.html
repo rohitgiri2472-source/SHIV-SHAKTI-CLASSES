@@ -18,32 +18,90 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="css/app.css" />
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <div class="nav-left">
-        <img src="assests/images/logo.jpeg" alt="logo" />
-        <span>Shiv Shakti Classes</span>
+
+    <!--Popup page-->
+    <div class="popup-overlay" id="popup">
+
+  <div class="popup-box">
+      <!--right in popup-box-->
+
+
+    <!--left in popup-->
+    <div class="popup-left">
+      <img src="assests/images/logo.jpeg" alt="logo">
+      <h2>Shiv Shakti Classes</h2>
+      <p>Start your journey to success</p>
+    </div>
+
+    <!--right in popup-box-->
+    <div class="popup-right">
+    <button class="close-btn" id="closePopup">&times;</button>
+
+    <h2>Get Free Guidance 🎓</h2>
+    <p>Fill your details and we will contact you shortly</p>
+
+    <form id="leadForm">
+
+
+      <div class="input-group">
+        <input type="text" placeholder="Full Name" required>
+        <label>Full Name</label>
+        </div>
+
+        <div class="input-group">
+      <input type="tel" placeholder="Phone Number" required patteren="[0-9]{10}">
+      <label>Phone Number</label>
+      </div>
+      
+      <div class="input-group">
+      <input type="text" placeholder="Class" required>
+      <label>CLASS (1st - 12th)</label>
       </div>
 
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="course.html">Courses</a></li>
-        <li><a href="faculty.html">Faculty</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <button type="submit">Submit</button>
+    </form>
 
-        <li>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeirpgSIUcNO7_4b2XVUJ9JqK0_mKCUy5pn5EDC_5AVcuCiJw/viewform?usp=dialog"
-            class="btn"
-            >Enroll</a
-          >
-        </li>
-      </ul>
-    </header>
+    <p class="note">We will contact you shortly 📞</p>
+   </div>
+    </div>
+      </div>
+
+
+   
+   <!--Navbar-->
+    <header class="navbar">
+
+  <!-- LEFT -->
+  <div class="nav-left">
+    <img src="assests/images/logo.jpeg" alt="logo">
+    <span>Shiv Shakti Classes</span>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="signup.html" class="signup-btn">Signup</a>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  </div>
+
+  <!-- DROPDOWN MENU -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="course.html">Courses</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+</header>
 
     <!-- HERO -->
     <section class="hero">
@@ -52,9 +110,7 @@
         <p>Top Coaching for Class (1st to 12th)</p>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeirpgSIUcNO7_4b2XVUJ9JqK0_mKCUy5pn5EDC_5AVcuCiJw/viewform?usp=dialog"
-          class="btn"
-          >Enroll Now</a
-        >
+          class="btn">Enroll Now</a>
       </div>
     </section>
 
@@ -109,33 +165,27 @@
       </div>
     </section>
 
-    <!-- TESTIMONIAL -->
+
     <section class="testimonials">
-      <h2>What Students Say</h2>
+  
 
-      <div class="testimonial-container">
-        <div class="testimonial">
-          <p>"Best coaching classes! Teachers are very supportive."</p>
-          <h4>- Student</h4>
-        </div>
+  <div class="slider-container">
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" class="slide active">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" class="slide">
+    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" class="slide">
 
-        <div class="testimonial">
-          <p>"My marks improved a lot after joining."</p>
-          <h4>- Parent</h4>
-        </div>
-
-        <div class="testimonial">
-          <p>"Perfect place for strong foundation."</p>
-          <h4>- Student</h4>
-        </div>
-      </div>
-    </section>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+</section>
 
     <!-- FINAL CTA -->
     <section class="cta">
       <h2>Admission Open</h2>
       <p>Enroll now and secure your future</p>
-      <a href="#" class="btn">Apply Now</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeirpgSIUcNO7_4b2XVUJ9JqK0_mKCUy5pn5EDC_5AVcuCiJw/viewform?usp=dialog" class="btn">Apply Now</a>
     </section>
 
     <!--FO0ter-->
@@ -162,10 +212,10 @@
     <div class="footer-col">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Faculty</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
@@ -194,5 +244,59 @@
     <p>© 2026 Shiv Shakti Classes. All rights reserved.</p>
   </div>
 </footer>
-  </body>
-</html>
+
+ <script> 
+ const toggle = document.getElementById("menu-toggle"); 
+ const navLinks = document.getElementById("nav-links"); 
+ 
+ toggle.addEventListener("click", () => { 
+  navLinks.classList.toggle("active");
+ });
+  document.addEventListener("DOMContentLoaded", function () {
+     // SLIDER CODE
+      let index = 0;
+       const slides = document.querySelectorAll(".slide"); 
+       const dots = document.querySelectorAll(".dot");
+        function showSlide(i) { 
+          if (!slides.length || !dots.length) return; 
+          slides.forEach(slide => slide.classList.remove("active")); 
+          dots.forEach(dot => dot.classList.remove("active"));
+           slides[i].classList.add("active"); 
+           dots[i].classList.add("active");
+
+            index = i;
+             } 
+             
+             setInterval(() => { 
+              index = (index + 1) % slides.length;
+               showSlide(index); 
+               }, 3000); 
+               const popup = document.getElementById("popup"); 
+               const closeBtn = document.getElementById("closePopup"); 
+               const form = document.getElementById("leadForm");
+                setTimeout(() => {
+                   popup.classList.add("active");
+                   }, 500);
+                 closeBtn.addEventListener("click", () => {
+                   popup.classList.remove("active");
+                    });
+                     form.addEventListener("submit", (e) => {
+                       e.preventDefault();
+                        alert("Thanks! We will contact you."); 
+                        popup.classList.remove("active");
+                         });
+                          });
+
+
+                           let index = 0; 
+                           const slides = document.querySelectorAll(".slide"); 
+                           function showSlide() { 
+                            slides.forEach(slide => slide.classList.remove("active"));
+                             slides[index].classList.add("active");
+                              index = (index + 1) % slides.length; 
+                              } 
+                              
+                              setInterval(showSlide, 3000); 
+                              </script>
+                               </body>
+                                </html>
