@@ -1,0 +1,71 @@
+body{
+
+  font-family: Arial;
+
+  background:#f5f7fb;
+
+  padding:40px;
+
+}
+
+.admin-login{
+
+  width:350px;
+
+  margin:auto;
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:12px;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.1);
+
+}
+
+input{
+
+  width:100%;
+
+  padding:12px;
+
+  margin:10px 0;
+
+}
+
+button{
+
+  width:100%;
+
+  padding:12px;
+
+  background:#0f2b6b;
+
+  color:white;
+
+  border:none;
+
+  cursor:pointer;
+
+}
+
+table{
+
+  width:100%;
+
+  background:white;
+
+  border-collapse:collapse;
+
+  margin-top:20px;
+
+}
+
+th, td{
+
+  border:1px solid #ddd;
+
+  padding:12px;
+
+}

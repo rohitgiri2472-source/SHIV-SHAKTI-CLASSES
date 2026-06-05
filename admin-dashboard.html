@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <h1>Admin Dashboard</h1>
+
+    <button onclick="logout()" class="logout-btn">
+      Logout
+    </button>
+
+
+    <!-- USERS -->
+
+    <div class="dashboard-section">
+
+      <h2>Registered Users</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+
+        </thead>
+
+        <tbody id="usersTable"></tbody>
+
+      </table>
+
+    </div>
+
+
+
+    <!-- STUDENTS -->
+
+    <div class="dashboard-section">
+
+      <h2>Enrolled Students</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+          </tr>
+
+        </thead>
+
+        <tbody id="studentsTable"></tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <script src="admin-dashboard.js"></script>
+
+</body>
+</html>

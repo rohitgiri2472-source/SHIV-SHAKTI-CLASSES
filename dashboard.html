@@ -1,23 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <title>Dashboard - Shiv Shakti Classes</title>
-  <link rel="stylesheet" href="css/app.css">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Student Dashboard</title>
+
+  <link rel="stylesheet"
+    href="css/app.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
 
-<header class="dashboard-header">
-  <h1>Student Dashboard</h1>
-  <button onclick="logout()" class="logout-btn">Logout</button>
-</header>
+  <!-- ========================= -->
+  <!-- SIDEBAR -->
+  <!-- ========================= -->
 
-<section class="dashboard">
-  <h2 id="welcome"></h2>
+  <div class="dashboard-layout">
 
-  <div id="dashboardContainer"></div>
-</section>
+    <aside class="sidebar">
 
-<script src="js/dashboard.js"></script>
+      <div class="sidebar-top">
+
+        <img src="assests/images/logo.jpeg"
+          alt="logo">
+
+        <h2>Shiv Shakti</h2>
+
+        <p>Student Panel</p>
+
+      </div>
+
+
+
+      <div class="sidebar-menu">
+
+        <a href="#overview">
+          <i class="fas fa-home"></i>
+          Dashboard
+        </a>
+
+        <a href="#courses">
+          <i class="fas fa-book"></i>
+          My Courses
+        </a>
+
+        <a href="#faculty">
+          <i class="fas fa-chalkboard-teacher"></i>
+          Faculties
+        </a>
+
+        <a href="#demo">
+          <i class="fas fa-video"></i>
+          Demo Classes
+        </a>
+
+        <a href="#performance">
+          <i class="fas fa-chart-line"></i>
+          Performance
+        </a>
+
+        <a href="#profile">
+          <i class="fas fa-user"></i>
+          Profile
+        </a>
+
+      </div>
+
+
+
+      <button class="logout-btn"
+        onclick="logout()">
+
+        <i class="fas fa-sign-out-alt"></i>
+        Logout
+
+      </button>
+
+    </aside>
+
+
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
+
+    <main class="main-dashboard">
+
+
+
+      <!-- TOPBAR -->
+
+      <div class="topbar">
+
+        <div>
+
+          <h1 id="welcomeName">
+            Welcome Student 👋
+          </h1>
+
+          <p>
+            Continue your learning journey
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- OVERVIEW -->
+
+      <section class="overview-cards"
+        id="overview">
+
+        <div class="overview-card">
+
+          <i class="fas fa-book-open"></i>
+
+          <h2>12+</h2>
+
+          <p>Courses</p>
+
+        </div>
+
+
+
+        <div class="overview-card">
+
+          <i class="fas fa-video"></i>
+
+          <h2>50+</h2>
+
+          <p>Live Classes</p>
+
+        </div>
+
+
+
+        <div class="overview-card">
+
+          <i class="fas fa-users"></i>
+
+          <h2>500+</h2>
+
+          <p>Students</p>
+
+        </div>
+
+
+
+        <div class="overview-card">
+
+          <i class="fas fa-award"></i>
+
+          <h2>98%</h2>
+
+          <p>Results</p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- COURSES -->
+
+      <section class="dashboard-section"
+        id="courses">
+
+        <div class="section-title">
+
+          <h2>My Courses</h2>
+
+        </div>
+
+        <div id="dashboardContainer"
+          class="course-grid">
+
+        </div>
+
+      </section>
+
+
+
+      <!-- FACULTY -->
+
+      <section class="dashboard-section"
+        id="faculty">
+
+        <div class="section-title">
+
+          <h2>Top Faculties</h2>
+
+        </div>
+
+        <div class="faculty-grid">
+
+
+
+          <div class="faculty-card">
+
+            <img src="assests/images/faculty.jpg"
+              alt="faculty">
+
+            <h3>Rahul Sir</h3>
+
+            <p>Mathematics Faculty</p>
+
+          </div>
+
+
+
+          <div class="faculty-card">
+
+            <img src="assests/images/faculty.jpg"
+              alt="faculty">
+
+            <h3>Priya Ma'am</h3>
+
+            <p>Science Faculty</p>
+
+          </div>
+
+
+
+          <div class="faculty-card">
+
+            <img src="assests/images/faculty.jpg"
+              alt="faculty">
+
+            <h3>Amit Sir</h3>
+
+            <p>English Mentor</p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- DEMO CLASSES -->
+
+      <section class="dashboard-section"
+        id="demo">
+
+        <div class="section-title">
+
+          <h2>Demo Classes</h2>
+
+        </div>
+
+        <div class="demo-grid">
+
+
+
+          <div class="demo-card">
+
+            <i class="fas fa-play-circle"></i>
+
+            <h3>Math Demo</h3>
+
+            <button>Watch Now</button>
+
+          </div>
+
+
+
+          <div class="demo-card">
+
+            <i class="fas fa-play-circle"></i>
+
+            <h3>Science Demo</h3>
+
+            <button>Watch Now</button>
+
+          </div>
+
+
+
+          <div class="demo-card">
+
+            <i class="fas fa-play-circle"></i>
+
+            <h3>English Demo</h3>
+
+            <button>Watch Now</button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- PERFORMANCE -->
+
+      <section class="dashboard-section"
+        id="performance">
+
+        <div class="section-title">
+
+          <h2>Your Performance</h2>
+
+        </div>
+
+        <div class="performance-box">
+
+          <div class="progress-item">
+
+            <p>Mathematics</p>
+
+            <div class="progress-bar">
+              <span style="width:90%"></span>
+            </div>
+
+          </div>
+
+
+
+          <div class="progress-item">
+
+            <p>Science</p>
+
+            <div class="progress-bar">
+              <span style="width:80%"></span>
+            </div>
+
+          </div>
+
+
+
+          <div class="progress-item">
+
+            <p>English</p>
+
+            <div class="progress-bar">
+              <span style="width:75%"></span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- PROFILE -->
+
+      <section class="dashboard-section"
+        id="profile">
+
+        <div class="section-title">
+
+          <h2>Student Profile</h2>
+
+        </div>
+
+        <div class="profile-card">
+
+          <img src="assests/images/logo.jpeg"
+            alt="profile">
+
+          <h3 id="studentName">
+            Student Name
+          </h3>
+
+          <p>
+            Shiv Shakti Classes Student
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+    </main>
+
+  </div>
+
+
+
+  <script src="dashboard.js"></script>
+
 </body>
+
 </html>

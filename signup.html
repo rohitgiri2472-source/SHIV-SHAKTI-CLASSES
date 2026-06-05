@@ -6,22 +6,76 @@
 </head>
 <body>
 
-<div class="auth-container">
-  <div class="auth-box">
+<div class="bg"></div>
+
+<div class="container">
+
+  <div class="card">
 
     <h2>Create Account</h2>
+    <p>Start your learning journey today</p>
 
-    <input type="email" id="email" placeholder="Enter Email">
-    <input type="password" id="password" placeholder="Enter Password">
+   <form id="signupForm">
 
-    <button class="btn-outline" onclick="signup()">Signup</button>
+  <div class="input-box">
+    <input type="text" id="signupName" required>
+    <label>Name</label>
+  </div>
 
-    <p>Already have account? <a href="login.html">Login</a></p>
+  <div class="input-box">
+    <input type="email" id="signupEmail" required>
+    <label>Email</label>
+  </div>
 
-    <a href="index.html" class="bck-btn">Go to Home</a>
+  <div class="input-box">
+    <input type="password" id="signupPassword" required>
+    <label>Password</label>
+  </div>
+
+  <button type="button" onclick="signupUser()">Signup</button>
+
+</form>
+    <p class="link">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
 
   </div>
+
 </div>
-<script src="auth.js"></script>
+
+<script>
+function signupUser() {
+  const name = document.getElementById("signupName").value;
+  const email = document.getElementById("signupEmail").value;
+  const password = document.getElementById("signupPassword").value;
+
+  if (!name || !email || !password) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  fetch("http://localhost:5000/api/auth/signup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name, email, password })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+
+    // if success → redirect to login
+    if (data.message === "Signup successful") {
+      window.location.href = "login.html";
+    }
+  })
+  .catch(err => {
+    console.log(err);
+    alert("Backend not connected");
+  });
+}
+</script>
+
 </body>
 </html>

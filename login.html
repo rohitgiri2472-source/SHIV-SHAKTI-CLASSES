@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login - Shiv Shakti Classes</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
-<div class="auth-container">
-  <div class="auth-box">
+<div class="bg"></div>
+
+<div class="container">
+
+  <div class="card">
 
     <h2>Login</h2>
+    <p>Welcome back to Shiv Shakti Classes</p>
 
-    <input type="email" id="loginEmail" placeholder="Enter Email">
-    <input type="password" id="loginPassword" placeholder="Enter Password">
+   <form id="loginForm">
 
-    <button class="btn-outline" onclick="login()">Login</button>
-
-    <p>New user? <a href="signup.html">Signup</a></p>
-
-    <a href="index.html" class="bck-btn">Go to Home</a>
-
-  </div>
+     <div class="input-box">
+  <input type="email" id="loginEmail" required>
+  <label>Email</label>
 </div>
 
-<script src="auth.js"></script>
+<div class="input-box">
+  <input type="password" id="loginPassword" required>
+  <label>Password</label>
+</div>
+
+      <button type="button" onclick="login()">Login</button>
+      
+    </form>
+
+    <p class="link">
+      Don’t have an account? <a href="signup.html">Signup</a>
+    </p>
+
+  </div>
+
+</div>
+<script src="api.js"></script>
 </body>
 </html>
