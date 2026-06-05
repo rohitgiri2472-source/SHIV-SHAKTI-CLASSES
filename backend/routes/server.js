@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-const authRoutes = require("./auth");
+const authRoutes = require('./routes/auth');
 const authMiddleware = require("../middleware/authMiddleware");
 const enrollmentRoutes = require("./enrollment");
 const adminRoutes = require("./admin");
