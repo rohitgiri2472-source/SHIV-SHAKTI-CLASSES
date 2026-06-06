@@ -9,7 +9,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
 
-    const response = await fetch("http://localhost:5000/api/admin/login", {
+    const response = await fetch("https://shiv-shakti-classes.onrender.com/api/admin/login", {
 
       method: "POST",
 

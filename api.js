@@ -16,7 +16,7 @@ async function signup() {
   try {
 
     const res = await fetch(
-      "http://localhost:5000/api/auth/signup",
+      "https://shiv-shakti-classes.onrender.com/api/auth/signup",
       {
         method: "POST",
 
@@ -59,7 +59,7 @@ async function login() {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/auth/login",
+      "https://shiv-shakti-classes.onrender.com/api/auth/login",
       {
         method: "POST",
 

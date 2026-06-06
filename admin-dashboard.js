@@ -22,7 +22,7 @@ async function fetchUsers() {
   try {
 
     const response =
-      await fetch("http://localhost:5000/api/admin/users");
+      await fetch("https://shiv-shakti-classes.onrender.com/api/admin/users");
 
     const users = await response.json();
 
@@ -61,7 +61,7 @@ async function fetchStudents() {
   try {
 
     const response =
-      await fetch("http://localhost:5000/api/admin/students");
+      await fetch("https://shiv-shakti-classes.onrender.com/api/admin/students");
 
     const students = await response.json();
 
